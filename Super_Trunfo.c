@@ -3,9 +3,9 @@
 
 */
 
-char codigo[4], estado[20], cidade[15] ;
-int pontos ; 
-float PIB,area,população ;
+char codigo[4], estado[20], cidade[15];
+int pontos; 
+float PIB, area, populacao;
 
 int main(){
     printf("\n Super Trunfo Países \n");
