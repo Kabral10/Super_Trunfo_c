@@ -11,7 +11,7 @@ PIB: O Produto Interno Bruto da cidade. Tipo: float
 Número de Pontos Turísticos: A quantidade de pontos turísticos na cidade. Tipo: int
 */
 
-char codigo1[4], codigo2[4], nome1[20], nome2[20], estado1[15], estado2[15];
+char codigo1[4], codigo2[4], nome1[20], nome2[20], estado1[20], estado2[20];
 int popula1, popula2, turismo1, turismo2;
 float PIB1, PIB2, area1, area2;
 int main(){
@@ -22,9 +22,11 @@ int main(){
     printf("Escreva o codigo da primeira carta: \n");
     scanf("%s", &codigo1);
     printf("Escreva o nome do estado: \n");
-    scanf(" %s", &estado1);
+    scanf("%s", &estado1);
+    fgets(estado1,20,stdin);
     printf("Escreva o nome da cidade: \n");
-    scanf(" %s", &nome1);
+    fgets(nome1,20,stdin);
+    scanf("%s", &nome1);
     printf("Qual a população da cidade: \n");
     scanf("%d", &popula1);
     printf("Quantos pontos turisticos existem nessa cidade: \n");
@@ -39,8 +41,10 @@ int main(){
     printf("Escreva o codigo da segunda carta: \n");
     scanf("%s", &codigo2);
     printf("Escreva o nome do estado: \n");
+    fgets(estado2,20,stdin);
     scanf(" %s", &estado2);
     printf("Escreva o nome da cidade: \n");
+    fgets(nome2,20,stdin);
     scanf(" %s", &nome2);
     printf("Qual a população da cidade: \n");
     scanf("%d", &popula2);
@@ -61,7 +65,7 @@ int main(){
     printf("A população da cidade é de %d habitantes \n", popula1);
     printf("Essa cidade tem %d pontos turisticos \n", turismo1);
     printf("O produto interno bruto é de %.1f \n", PIB1);
-    printf("A area dessa cidade é de %.1fkm² \n", area1);
+    printf("A area dessa cidade é de %fkm² \n", area1);
 
 //segunda carta
     printf("\n--Segunda Carta--\n");
